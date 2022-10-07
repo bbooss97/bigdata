@@ -1,0 +1,4 @@
+the result here should be n-1/n * sigma squared
+beacause the sample population is biased
+
+https://www.jamelsaadaoui.com/unbiased-estimator-for-population-variance-clearly-explained/
