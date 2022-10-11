@@ -1,3 +1,10 @@
 to solve this exercise follow the following video using the chi squared test 
 https://www.youtube.com/watch?v=HKDqlYSLt68
 no this may have falls
+
+
+https://stats.stackexchange.com/questions/1807/how-to-perform-students-t-test-having-only-sample-size-sample-average-and-popu
+https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Hypothesis-Tests-for-One-Population-Mean/Sigma-Is-Unknown/index.html
+
+just use the t student with one sample and limit the standard deviation
+https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/one-sample-t-test/
