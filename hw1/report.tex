@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{First homework Big Data Computing}
+\author{Andrea Morelli}
+\date{October 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\section{}
+
+
+
+\section{}
+In order to solve the third assigment i used the chernoff bound.
+We want to estimate the fraction p of people that have been infected by a virus in a given population.
+So we perform n tests sampled uniformly and independently at random from the population and each test will return the correct answer every time.
+Given $0<\varepsilon<1   \ and  \ 0<\delta<1$ We want to find $\mathbb{P}(|\hat{p}-p|>\varepsilon p)<\delta$, whenever $p>\theta$,
+where $\hat{p}$ is our estimator of p.\\
+i start by defining \( X_{i}=\left\{\begin{array}{ll}1 & \text { if \ infected \ with \ proability \ p} \\ 0 & \text { if\ not \ infected \ with \ probability \ 1-p }\end{array}\right. \)
+\\and $X=\sum ^{n}_{i=1}X_{i}$ .$\hat{p}$ that is our estimator will be \( \frac{1}{n} X \) (sample mean)and will have a mean equal to $p$.\\Using those we can use also use the chernoff bound:\\For $\varepsilon>0: \mathbf{P}[X \geq(1+\varepsilon) \mu]<\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^\mu$ where $\mu$ is the mean of $X$ and $X$ is $\sum ^{n}_{i=1}X_{i}$ with $X_{i}$ being an indipendent poisson trial.\\
+Using $\hat{p}$ and p that is its mean we can write:\\
+$$
+P(|\hat{p}-p|>\varepsilon p)<2\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^p
+$$
+Use the 2 to take into account the module so both the tails of the distribution and not just one.\\
+To use the form used by the chernoff bound we transform in the follwing way by just scaling everything with n:\\
+$$
+P(|X-np|>\varepsilon n p)<2\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^{np}
+$$
+Being this the maximum value it can assume we can write that :
+$$2\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^{np}<\delta$$ and solving for n we can obtain the minimum number of n such that the initial condition holds.
+
+
+
+
+
+
+\section{}
+
+\end{document}
