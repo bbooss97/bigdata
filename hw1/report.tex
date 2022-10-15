@@ -12,6 +12,24 @@
 \section{}
 
 \section{}
+\subsection{a}
+We have to compute $Var(S)$ with $S$ being 
+$S=\frac{1}{n} \sum_{i=1}^n X_i$.\\
+We start with $Var(\frac{1}{n} \sum_{i=1}^n X_i)$\\
+$
+\operatorname{Var}\left(\frac{X_1}{n}+\frac{X_2}{n}+\cdots \frac{X_n}{n}\right)
+$\\
+Then being the variance a squared function we can use the property of the variance $\operatorname{Var}(a X)=a^2 \operatorname{Var}(X)$\\
+and derive $\frac{1}{n^2} \operatorname{Var}\left(X_1\right)+\frac{1}{n^2} \operatorname{Var}\left(X_2\right)+\cdots+\frac{1}{n^2} \operatorname{Var}\left(X_n\right)$\\
+and being $Var(X_i)=\sigma^2$ we obtain\\
+$\operatorname{Var}(s)=\frac{n \sigma^2}{n^2}=\frac{\sigma}{n}$
+
+
+\subsection{b}
+
+
+
+
 
 
 
@@ -22,21 +40,21 @@ So we perform n tests sampled uniformly and independently at random from the pop
 Given $0<\varepsilon<1   \ and  \ 0<\delta<1$ We want to find $\mathbb{P}(|\hat{p}-p|>\varepsilon p)<\delta$, whenever $p>\theta$,
 where $\hat{p}$ is our estimator of p.\\
 i start by defining \( X_{i}=\left\{\begin{array}{ll}1 & \text { if \ infected \ with \ proability \ p} \\ 0 & \text { if\ not \ infected \ with \ probability \ 1-p }\end{array}\right. \)
-\\and $X=\sum ^{n}_{i=1}X_{i}$ .$\hat{p}$ that is our estimator will be \( \frac{1}{n} X \) (sample mean)and will have a mean equal to $p$.\\Using those we can use also use the chernoff bound:\\For $\varepsilon>0: \mathbf{P}[X \geq(1+\varepsilon) \mu]<\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^\mu$ where $\mu$ is the mean of $X$ and $X$ is $\sum ^{n}_{i=1}X_{i}$ with $X_{i}$ being an indipendent poisson trial.\\
+\\and $X=\sum ^{n}_{i=1}X_{i}$ .$\hat{p}$ that is our estimator will be \( \frac{1}{n} X \) (sample mean)and will have a mean equal to $p$.\\Using those we can use also use the chernoff bound:\\For $\varepsilon>0: \mathbf{P}[X \geq(1+\varepsilon) \mu]<e^{-\frac{\varepsilon^2}{3} \mu}$ where $\mu$ is the mean of $X$ and $X$ is $\sum ^{n}_{i=1}X_{i}$ with $X_{i}$ being an indipendent poisson trial.\\
 Using $\hat{p}$ and p that is its mean we can write:\\
 $$
-P(|\hat{p}-p|>\varepsilon p)<2\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^p
+P(|\hat{p}-p|>\varepsilon p)<2e^{-\frac{\varepsilon^2}{3} p}
 $$
 Use the 2 to take into account the module so both the tails of the distribution and not just one.\\
 To use the form used by the chernoff bound we transform in the follwing way by just scaling everything with n:\\
 $$
-P(|X-np|>\varepsilon n p)<2\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^{np}
+P(|X-np|>\varepsilon n p)<2e^{-\frac{\varepsilon^2}{3} np}
 $$
 Being this the maximum value it can assume we can write that :
-$$2\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^{np}<\delta$$ and solving for n we can obtain the minimum number of n such that the initial condition holds.
+$$2e^{-\frac{\varepsilon^2}{3} np}<\delta$$ and solving for n we can obtain the minimum number of n such that the initial condition holds.
 
 $$
-n<\frac{\log _{\left(\frac{e^\varepsilon}{(1+\varepsilon)^{1+\varepsilon}}\right)^{np}}\left(\frac{p}{2}\right)}{p}
+n>\ln \left(\frac{\delta}{2}\right) \cdot \frac{3}{\varepsilon^2 \rho}
 $$
 
 
