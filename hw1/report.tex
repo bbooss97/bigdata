@@ -31,12 +31,23 @@ So i have to compute: $E\left(Z\right)=E\left[\frac{\sum_{i=1}^n\left(X_i-S\righ
 Then distribute the sum
 $$E\left[\frac{\sum_{i=1}^n X_i^2 \ -\sum_{i=1}^n 2X_i S +\sum_{i=1}^n S^2}{n}\right]$$
 Then using $S=\frac{1}{n} \sum_{i=1}^n X_i$
-$$E\left[\frac{\sum_{i=1}^n X_i^2 \ -2 nS^2 + nS^2}{n}\right]$$
-$$E\left[\frac{\sum_{i=1}^n X_i^2 \ - nS^2 }{n}\right]$$
+$$E\left[\frac{(\sum_{i=1}^n X_i^2) \ -2 nS^2 + nS^2}{n}\right]$$
+$$E\left[\frac{(\sum_{i=1}^n X_i^2) \ - nS^2 }{n}\right]$$
 Then using the linearity of the expectation
-$$\frac{\sum_{i=1}^nE[ X_i^2] - nE[S^2]}{n}$$
+\begin{equation}
+\label{eqn:ez}
+    E[Z]=\frac{(\sum_{i=1}^nE[ X_i^2]) - nE[S^2]}{n}
+\end{equation}
 Then using the property of the variance $\operatorname{Var}(X)=E\left[X^2\right]-(E[X])^2$
-
+we have $$E[X^2]=\sigma^2+\mu^2$$
+If applied on S and using the result of the "a" point we derive
+$$E[S^2]=\frac{\sigma^2}{n}+\mu^2$$
+Now applying those on \ref{eqn:ez} we obtain
+$$E[Z]=\frac{(\sum_{i=1}^n\sigma^2+\mu^2) - n(\frac{\sigma^2}{n}+\mu^2)}{n}$$
+Developing everything
+$$\frac{n\sigma^2+n\mu^2 - \sigma^2-n\mu^2}{n}$$
+Obtaining
+$$E[Z]=\frac{(n-1)\sigma^2}{n}$$
 
 
 
