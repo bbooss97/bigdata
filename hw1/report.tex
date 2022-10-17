@@ -22,10 +22,36 @@ $\\
 Then being the variance a squared function we can use the property of the variance $\operatorname{Var}(a X)=a^2 \operatorname{Var}(X)$\\
 and derive $\frac{1}{n^2} \operatorname{Var}\left(X_1\right)+\frac{1}{n^2} \operatorname{Var}\left(X_2\right)+\cdots+\frac{1}{n^2} \operatorname{Var}\left(X_n\right)$\\
 and being $Var(X_i)=\sigma^2$ we obtain\\
-$\operatorname{Var}(s)=\frac{n \sigma^2}{n^2}=\frac{\sigma}{n}$
+$\operatorname{Var}(S)=\frac{n \sigma^2}{n^2}=\frac{\sigma}{n}$
 
 
 \subsection{b}
+Given $Z=\frac{1}{n} \sum_{i=1}^n\left(X_i-S\right)^2$i have to compute $\mathbb{E}[Z]$ as a function of n and $\sigma^2$.
+So i have to compute: $E\left(Z\right)=E\left[\frac{\sum_{i=1}^n\left(X_i-S\right)^2}{n}\right]$.\\I develop the square of a binomial term$$E\left[\frac{\sum_{i=1}^n\left(X_i^2 -2X_i S +S^2)}{n}\right]$$
+Then distribute the sum
+$$E\left[\frac{\sum_{i=1}^n X_i^2 \ -\sum_{i=1}^n 2X_i S +\sum_{i=1}^n S^2}{n}\right]$$
+Then using $S=\frac{1}{n} \sum_{i=1}^n X_i$
+$$E\left[\frac{\sum_{i=1}^n X_i^2 \ -2 nS^2 + nS^2}{n}\right]$$
+$$E\left[\frac{\sum_{i=1}^n X_i^2 \ - nS^2 }{n}\right]$$
+Then using the linearity of the expectation
+$$\frac{\sum_{i=1}^nE[ X_i^2] - nE[S^2]}{n}$$
+Then using the property of the variance $\operatorname{Var}(X)=E\left[X^2\right]-(E[X])^2$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
