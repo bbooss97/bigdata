@@ -5,3 +5,4 @@ for i in range(n):
     if not a.issuperset(b):
         print(False)
         break
+print(True)

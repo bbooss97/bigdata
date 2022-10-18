@@ -113,11 +113,12 @@ $$
 
 
 \section{}
-We can use the theorem 1.1 linked in the assignment 3.
+We can start by defining the null hyphothesis $H_0=P(|\mu-\hat{\mu}|=0)$ with $\mu$ being the mean of the supposed uniform distribution 175 and $\hat{\mu}$ being the sample mean $\hat{\mu}=\frac{\sum_{i=0}^n X_i}{n}$ with $n$ being 200 and $X_i$ assuming values between 160 and 190 with probability $\frac{1}{30}$.
+\\We can then use the theorem 1.1 linked in the assignment 3.
 \\Let $X=\sum_{i=0}^nX_i$ where $X_i \ \in [n]$ are indipendetly distributed in $[0,1]$.\\
 Then for $0<\varepsilon<1$ , $\operatorname{Pr}[X>(1+\epsilon) \mathrm{E}[X]] \leq \exp \left(-\frac{\epsilon^2}{3} \mathrm{E}[X]\right)$.
-
-
+\\We can rescale the variables $X_i$ in order to have values between $[0,1]$ applying this simple normalization $Z_i=\frac{X_i-minValue}{maxValue-minValue}$ with $minValue=160$ and $maxValue=190$.
+Now we st
 
 
 
