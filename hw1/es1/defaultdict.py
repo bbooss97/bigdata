@@ -11,7 +11,6 @@ for i in range(1,m+1):
 
 for i in b:
     if i in a:
-        print(*a[i],end=' ')
+        print(*a[i])
     else:
-        print(-1,end=' ')
-    print()
+        print(-1)
