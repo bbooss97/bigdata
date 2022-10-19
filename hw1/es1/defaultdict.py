@@ -1,5 +1,17 @@
 from collections import defaultdict
-al,bl =[int(i) for i in input().split()]
-a,b=defaultdict(),defaultdict()
-for i in al:
-    a[i]+=1
+n,m=[int(i) for i in input().split()]
+a=defaultdict(list)
+b=defaultdict(list)
+
+for i in range(1,n+1):
+    a[input()].append(i)
+
+for i in range(1,m+1):
+    b[input()].append(i)
+
+for i in b:
+    if i in a:
+        print(*a[i],end=' ')
+    else:
+        print(-1,end=' ')
+    print()
