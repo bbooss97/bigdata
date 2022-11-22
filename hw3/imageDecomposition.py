@@ -14,9 +14,13 @@ def svd(image,nComponents):
 def readImage(filename):
     return np.array(Image.open(filename).convert('L'))
 
-#funtion to plot the image
+#funtion to plot the image with matplotlib
 def plotImage(image):
-    Image.fromarray(image).show()
+    # Image.fromarray(image).show()
+    plt.imshow(image, cmap='gray')
+    plt.show()
+
+
 
 
 image=readImage('./image.jpg')
